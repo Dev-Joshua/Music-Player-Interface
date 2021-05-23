@@ -1,0 +1,181 @@
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0 auto;
+    background: rgba(38, 92, 13, 0.467);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #33303b;
+}
+.wrapper {
+    display: grid;
+    grid-template-rows: 60px 300px auto auto;
+    height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: black;
+}
+.main-player{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-top: 15px;
+    overflow: hidden;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.main-player::-webkit-scrollbar{
+    display: none;
+}
+.card {
+    min-width: 24.9rem;
+    height: 24.9rem;
+    margin: 0 3.4rem 0 0;
+    border-radius: 25px;
+    scroll-snap-align: center;
+    padding: 0.9rem;
+    border-radius: 20px;
+    box-shadow: 7px -7px 12px 2px #642929,
+                -7px 7px 12px 2px #8b8989;
+}
+.card img {
+    justify-content: center;
+    border-radius: 2.5rem;
+}
+.title {
+    justify-content: center;
+    text-align: center;
+}
+.title h2 {
+    margin: 0;
+    margin-top: 1.3rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.title h3 {
+    margin: 0;
+    margin-top: 0.7rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.progress-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 18.75px) 1fr repeat(2, 18.75px);
+    grid-template-rows: 10px 1fr;
+    align-items: flex-start;
+    margin-top: 0.2rem;
+}
+.progress-bar .bar {
+    grid-column: 3;
+    position: relative;
+    width: auto;
+    height: 5px;
+    clip-path: polygon()(82% 10% 16% 10%);
+    background: linear-gradient(to right, #642929, #8b8989);
+    border-radius: 20px;
+}
+.progress-bar .bar .dot {
+    position: absolute;
+    left: 120px;
+    top: -2px;
+    width: 9px;
+    background-color: #642929;
+    clip-path: circle(100%);
+    border-radius: 50%;
+}
+.progress-bar .start {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+.progress-bar .end {
+    position: relative;
+    left: -4px;
+    justify-self: center;
+    grid-column: 4;
+    grid-row: 2;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-buttons {
+    width: 40px;
+    height: 40px;
+    box-shadow: 4px -4px 8px 2px #642929,
+                -4px 4px 8px 2px #8b8989;
+    border-radius: 20px;
+}
+.buttons  .play {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+}
+.play {
+    margin: 0 1.6rem;
+    background-image: url('./assets/play.png');
+    background-repeat: no-repeat;
+    background-size: 62px;
+    background-position: center;
+}
+.next {
+    background-image: url('./assets/next.png');
+    background-repeat: no-repeat;
+    background-size: 42px;
+    background-position: center;
+}
+.previously {
+    background-image: url('./assets/previus.png');
+    background-repeat: no-repeat;
+    background-size: 42px;
+    background-position: center;
+}
+.shuffle {
+    margin-right: 1.6rem;
+    background-image: url('./assets/shuffle.png');
+    background-repeat: no-repeat;
+    background-size: 42px;
+    background-position: center;
+}
+.repeat {
+    margin-left: 1.6rem;
+    background-image: url('./assets/repeat.png');
+    background-repeat: no-repeat;
+    background-size: 42px;
+    background-position: center;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar {
+    width: 142px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.shuffle:hover, .previously:hover, .next:hover, .repeat:hover {
+    box-shadow: inset 4px 4px 8px #c8b2aa,
+                inset -4px -4px 8px #fff0e6;
+  }
+.play:hover {
+    box-shadow: inset 4px 4px 8px #c8b2aa,
+                inset -4px -4px 8px #fff0e6;
+  }
